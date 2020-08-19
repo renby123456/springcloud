@@ -9,9 +9,9 @@
         <outputRelativeToContentRoot value="true" />
         <module name="comment" />
         <module name="provider" />
-        <module name="api" />
-        <module name="feign" />
         <module name="eureka" />
+        <module name="feign" />
+        <module name="api" />
       </profile>
     </annotationProcessing>
   </component>
