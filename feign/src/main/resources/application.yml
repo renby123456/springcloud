@@ -1,0 +1,32 @@
+server:
+  port: 8061
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+spring:
+  application:
+    name: feign
+  redis:
+    database: 0
+    host: localhost
+    port: 6379
+    timeout: 6000ms
+    jedis:
+      pool:
+        max-active: 200
+        max-wait: -1ms
+        max-idle: 10
+        min-idle: 0
+
+feign:
+  hystrix:
+    enabled: false  #false 直走降级   #true 熔断
+  client:
+    config:
+      default:
+        connectTimeout: 2000
+        readTimeout: 2000
+

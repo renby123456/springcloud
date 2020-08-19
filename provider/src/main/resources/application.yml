@@ -1,0 +1,19 @@
+server:
+  port: 8080
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka #要和eureka注册服务的路径保持一致
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/1911?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: root
+    hikari:
+      maximum-pool-size: 100 #统一时刻最大连接数
+    type: com.zaxxer.hikari.HikariDataSource  #配置数据源类型
+  application:
+    name: provider
