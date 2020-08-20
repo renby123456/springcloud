@@ -8,10 +8,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="comment" />
+        <module name="api" />
+        <module name="config-server" />
         <module name="provider" />
         <module name="eureka" />
         <module name="feign" />
-        <module name="api" />
+        <module name="config-client" />
       </profile>
     </annotationProcessing>
   </component>
@@ -19,6 +21,8 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="api" options="-parameters" />
       <module name="comment" options="-parameters" />
+      <module name="config-client" options="-parameters" />
+      <module name="config-server" options="-parameters" />
       <module name="eureka" options="-parameters" />
       <module name="feign" options="-parameters" />
       <module name="provider" options="-parameters" />

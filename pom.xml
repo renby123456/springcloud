@@ -18,6 +18,11 @@
     <modules>
         <module>comment</module>
         <module>api</module>
+        <module>config-server</module>
+        <module>config-client</module>
+        <module>eureka</module>
+        <module>feign</module>
+        <module>provider</module>
     </modules>
 
 
