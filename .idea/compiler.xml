@@ -8,13 +8,13 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="zuul" />
-        <module name="eureka" />
         <module name="api" />
         <module name="config-server" />
         <module name="provider" />
         <module name="comment" />
-        <module name="feign" />
+        <module name="eureka" />
         <module name="config-client" />
+        <module name="feign" />
       </profile>
     </annotationProcessing>
   </component>

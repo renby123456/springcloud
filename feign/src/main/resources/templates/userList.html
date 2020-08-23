@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" th:href="@{/js/bootstrap3/css/bootstrap.css}"/>
+    <script th:src="@{/js/jquery-1.11.3.min.js}"></script>
+    <script th:src="@{/js/bootstrap3/js/bootstrap.js}"></script>
+    <link rel="stylesheet" th:href="@{/js/bootstrap-treeview/bootstrap-treeview.min.css}"/>
+    <script th:src="@{/js/bootstrap-treeview/bootstrap-treeview.min.js}"></script>
+
+    <link rel="stylesheet" th:href="@{/js/bootStrap-addTabs/bootstrap.addtabs.css}"/>
+    <script th:src="@{/js/bootStrap-addTabs/bootstrap.addtabs.js}"></script>
+
+    <link rel="stylesheet" th:href="@{/js/bootstrap-table/bootstrap-table.css}">
+    <script th:src="@{/js/bootstrap-table/bootstrap-table.js}"></script>
+    <script th:src="@{/js/bootstrap-table/locale/bootstrap-table-zh-CN.js}"></script>
+
+    <link rel="stylesheet" th:href="@{/js/bootstrap-datetimepicker/css/bootstrap-datetimepicker.css}">
+
+    <script th:src="@{/js/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js}"></script>
+    <script th:src="@{/js/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js}"></script>
+
+    <script th:src="@{/js/bootstrap-bootbox/bootbox.min.js}"></script>
+</head>
+<body>
+
+
+<div id="userTable" class="table"></div>
+
+
+</body>
+
+<script>
+
+    $(function(){
+        intoList();
+    });
+
+
+    function intoList(){
+        $("#userTable").bootstrapTable({
+            url:'../user/select',
+            method:'post',
+            contentType:'application/x-www-form-urlencoded',//post请求按照表单方式
+            pagination:true, //是否展示分页
+            pageList:[2, 4, 6, 8, 10, 20, 50],//分页组件
+            pageNumber:1,
+            pageSize:5,//默认每页条数
+            sidePagination:'client',//分页方式：client客户端分页，server服务端分页（*
+            columns:[
+                {checkbox:true},
+                {field:'id',title:'id'},
+                {field:'name',title:'名称'},
+                {field:'age',title:'性别'},
+                {field:'money',title:'钱'},
+                {field:'xg',title:'操作',formatter:function(value,row,index){
+                        return '<input type="button" onclick="xiadan('+row.id+')" value="提交">';
+                }}
+            ]
+
+        });
+    }
+
+    function xiadan(userId){
+        location.href="../user/selectUserOne?userId="+userId;
+    }
+
+</script>
+
+</html>

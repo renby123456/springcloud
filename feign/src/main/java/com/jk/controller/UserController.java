@@ -58,6 +58,12 @@ public class UserController {
             return false;
         }
     }
+
+    @RequestMapping("toselect")
+    public String toselect(){
+        return "userList";
+    }
+
     @RequestMapping("select")
     @ResponseBody
     @HystrixCommand(fallbackMethod = "aaa")

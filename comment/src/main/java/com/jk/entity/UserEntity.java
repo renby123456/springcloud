@@ -8,6 +8,7 @@ public class UserEntity {
     private Integer id;
     private String name;
     private String age;
-    private Integer typeId;
+    private Integer money;
+
 
 }
