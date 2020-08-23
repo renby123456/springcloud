@@ -1,0 +1,4 @@
+com\jk\FeignApplication.class
+com\jk\controller\UserController.class
+com\jk\service\UserServiceFallback.class
+com\jk\service\UserServiceFeign.class

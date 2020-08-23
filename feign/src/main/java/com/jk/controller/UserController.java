@@ -59,6 +59,11 @@ public class UserController {
         }
     }
 
+    //支付
+    @RequestMapping("selectUserOne")
+    public String selectUserOne(Integer id,Integer money){
+        return "redirect:../pay/alipay";
+    }
     @RequestMapping("toselect")
     public String toselect(){
         return "userList";

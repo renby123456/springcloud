@@ -56,15 +56,15 @@
                 {field:'age',title:'性别'},
                 {field:'money',title:'钱'},
                 {field:'xg',title:'操作',formatter:function(value,row,index){
-                        return '<input type="button" onclick="xiadan('+row.id+')" value="提交">';
+                        return '<input type="button" onclick="xiadan('+row.id+','+row.money+')" value="提交">';
                 }}
             ]
 
         });
     }
 
-    function xiadan(userId){
-        location.href="../user/selectUserOne?userId="+userId;
+    function xiadan(id,money){
+        location.href="../user/selectUserOne?id="+id+"&money="+money;
     }
 
 </script>
